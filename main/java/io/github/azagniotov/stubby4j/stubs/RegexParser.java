@@ -34,7 +34,7 @@ enum RegexParser {
             quote("?")));
 
     void compilePatternAndCache(final String value) {
-        compilePatternAndCache(value, Pattern.MULTILINE);
+        compilePatternAndCache(value, Pattern.MULTILINE | Pattern.DOTALL);
     }
 
     private void compilePatternAndCache(final String value, final int flags) {
