@@ -152,8 +152,9 @@ public class StubRepository {
                 final long elapsed = System.currentTimeMillis() - initialStart;
                 logMatch(elapsed, cachedPotentialMatch);
                 ANSITerminal.loaded(String.format("Potential match for the URL [%s] was deemed as a full match", incomingRequestUrl));
+                ANSITerminal.loaded(String.format("Actually not, I am not going to return cached value... muhehe"));
 
-                return Optional.of(cachedPotentialMatch);
+//                return Optional.of(cachedPotentialMatch);
             }
             ANSITerminal.warn(String.format("Cached match for the URL [%s] failed to match fully, invalidating match cache..", incomingRequestUrl));
             matchedStubsCache.remove(incomingRequestUrl);
